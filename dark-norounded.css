@@ -1,4 +1,10 @@
+/* Sharp corners. Base theme: dark.css */
 @import url("./dark.css");
+
+main {
+	--giscus-radius-card: 0;
+	--giscus-radius-control: 0;
+}
 
 *,
 *::before,

@@ -1,4 +1,10 @@
+/* Sharp corners. Base theme: light.css */
 @import url("./light.css");
+
+main {
+	--giscus-radius-card: 0;
+	--giscus-radius-control: 0;
+}
 
 *,
 *::before,

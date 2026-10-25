@@ -1,18 +1,44 @@
 # NOTICE
 
-This project contains CSS derived from the following MIT-licensed sources:
+This project contains CSS derived from the following MIT-licensed sources.
 
-- giscus (https://github.com/giscus/giscus)
-  Copyright (c) giscus contributors
-  Built-in themes and the custom theme structure, in turn derived from GitHub
-  Primer primitives (https://github.com/primer/primitives), Copyright (c) GitHub Inc.
+## Yukari0201/Yukari0201.github.io
 
-- Fuwari PR #405 by hikaru-im (https://github.com/saicaca/fuwari/pull/405)
-  Fuwari-style giscus theme with light/dark and hue-reactive styling.
+- https://github.com/Yukari0201/Yukari0201.github.io
+- Branch `astro`, commit `1ea16f558c9f5df8322fb3383cbed9b334b2866f`
+- Files: `src/styles/giscus-base.css`, `src/styles/giscus-light.css`,
+  `src/styles/giscus-dark.css`
+- Copyright (c) Yukari0201
 
-- Yukari0201/Yukari0201.github.io (https://github.com/Yukari0201/Yukari0201.github.io)
-  Copyright (c) Yukari0201
-  Source of the palette and base selector layout used as the starting point.
+These files are the direct source of the palette and base layout in
+`light.css` / `dark.css`.
 
-Modifications and additional variants in this repository are released under the
-MIT License; see LICENSE.
+## hikaru-im/akari
+
+- https://github.com/hikaru-im/akari
+- Fuwari PR #405: https://github.com/saicaca/fuwari/pull/405
+- The three upstream files above are byte-identical to
+  `src/styles/giscus-{base,light,dark}.css` in this repository.
+- Copyright (c) hikaru-im
+
+## giscus / GitHub Primer
+
+- https://github.com/giscus/giscus
+- https://github.com/primer/primitives
+- giscus theme variable names and default styles, in turn derived from GitHub
+  Primer primitives.
+- Copyright (c) giscus contributors and GitHub Inc.
+
+## Modifications
+
+The following changes were made for this repository and are released under the
+MIT License (see `LICENSE`):
+
+- The runtime hue variable and `calc()` expressions were replaced with the
+  literal hue `260`.
+- Invalid `oklch(..., 0.4)` alpha syntax was corrected to `oklch(... / 0.4)`.
+- Border-radius values in the base layout were parameterized with
+  `--giscus-radius-card` / `--giscus-radius-control` for the sharp-corner
+  variants.
+- The theme was split into eight static entry files (two full themes plus six
+  `@import` wrappers).
