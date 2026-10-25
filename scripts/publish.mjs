@@ -78,6 +78,16 @@ if (initialVersions.length !== 1) {
 	);
 }
 
+const basePrefix = initialComponent.match(
+	/const GISCUS_THEME_BASE = `([^`]*)\$\{GISCUS_THEME_VERSION\}`;/,
+)?.[1];
+if (!basePrefix) {
+	fail(
+		`Could not read GISCUS_THEME_BASE from ${GISCUS_COMPONENT}. ` +
+			"Expected a template literal containing ${GISCUS_THEME_VERSION}.",
+	);
+}
+
 const blogConfig = readFileSync(resolve(BLOG_DIR, "src/config.ts"), "utf8");
 const blogHue = blogConfig.match(/hue:\s*(\d+)/)?.[1];
 const themeHue = readFileSync(resolve(ROOT, "light.css"), "utf8").match(
@@ -140,7 +150,7 @@ console.log(`\npinned ${sha} -> ${GISCUS_COMPONENT}`);
 
 // --- verify CDN ------------------------------------------------------------
 
-const base = `https://fastly.jsdelivr.net/gh/SilonGJ/giscus-theme-debug@${sha}`;
+const base = `${basePrefix}${sha}`;
 
 async function probe(url) {
 	for (let attempt = 1; attempt <= 15; attempt++) {

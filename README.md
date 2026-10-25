@@ -88,8 +88,8 @@ The script:
 2. Stages, commits and pushes the theme repo (`main`).
 3. Reads the full 40-character commit hash.
 4. Rewrites `GISCUS_THEME_VERSION` in the blog's `src/components/Giscus.astro`.
-5. Probes all eight jsDelivr URLs (with retries) and fails if any is not
-   reachable.
+5. Probes all eight URLs on the same jsDelivr host used by `Giscus.astro`
+   (with retries) and fails if any is not reachable.
 
 Useful environment variable:
 
