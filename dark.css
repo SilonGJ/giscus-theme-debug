@@ -170,6 +170,11 @@ main {
     transform: scale(0.95);
 }
 
+/* Sign-out is a button, not a link, so drop the shared link underline. */
+.gsc-comment-box-bottom > button.link-secondary {
+    text-decoration: none !important;
+}
+
 /* Comment order and fixed-width toggles are not part of this design. */
 .gsc-right-header,
 .gsc-comment-box-md-toolbar {
@@ -239,8 +244,15 @@ main {
             border: none !important;
 
             .gsc-reply {
-                padding-top: 0.5rem !important;
-                padding-bottom: 0.25rem !important;
+                padding: 0.5rem 0.25rem 0.25rem !important;
+
+                .gsc-tl-line {
+                    left: 1.125rem !important;
+                }
+
+                .gsc-reply-author-avatar + div {
+                    margin-left: 0.25rem !important;
+                }
             }
         }
 
@@ -333,6 +345,21 @@ main {
         .gsc-comment-box-bottom {
             margin: 0 !important;
             padding: 0.5rem 0 !important;
+        }
+    }
+
+    /* The reply form sits inside a comment card, so keep its controls inset. */
+    .gsc-comment-box-is-reply {
+        .gsc-comment-box-tabs {
+            padding: 0.5rem 0.5rem !important;
+        }
+
+        .gsc-comment-box-main {
+            margin: 0 0.5rem !important;
+        }
+
+        .gsc-comment-box-bottom {
+            padding: 0.5rem 0.5rem !important;
         }
     }
 }
