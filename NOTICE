@@ -18,7 +18,7 @@ These files are the direct source of the palette and base layout in
 - https://github.com/hikaru-im/akari
 - Fuwari PR #405: https://github.com/saicaca/fuwari/pull/405
 - The three upstream files above are byte-identical to
-  `src/styles/giscus-{base,light,dark}.css` in this repository.
+  `src/styles/giscus-{base,light,dark}.css` in `hikaru-im/akari`.
 - Copyright (c) hikaru-im
 
 ## giscus / GitHub Primer
