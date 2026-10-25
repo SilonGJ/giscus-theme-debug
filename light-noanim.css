@@ -8,3 +8,8 @@
 	animation: none !important;
 	scroll-behavior: auto !important;
 }
+
+/* The loader is an animated GIF; `animation: none` does not stop it. */
+.gsc-loading-image {
+	background-image: none !important;
+}

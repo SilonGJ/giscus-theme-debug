@@ -65,9 +65,13 @@ Always reference an immutable commit hash, never `main`:
 https://cdn.jsdelivr.net/gh/SilonGJ/giscus-theme-debug@<40-char-commit-sha>/<variant>.css
 ```
 
-The blog keeps the hash in `src/constants/giscus-theme.generated.ts` (written by
-the publish script) and selects a variant with `GISCUS_THEME_STYLE` in
-`src/constants/giscus-theme.ts`.
+The blog builds all eight URLs from `GISCUS_THEME_VERSION` in
+`src/components/Giscus.astro` and picks a pair at runtime from the `dark`,
+`no-animations` and `no-rounded` classes on `<html>`. That lookup is the only
+dynamic part; every visual rule still lives in the CSS files above.
+
+The `*-noanim.css` wrappers also hide the animated Mona loading GIF, because
+`animation: none` cannot stop a GIF.
 
 ## Publish workflow
 
@@ -79,10 +83,11 @@ node scripts/publish.mjs
 
 The script:
 
-1. Checks the blog hue matches `/* giscus-hue: ... */`.
+1. Checks the blog hue matches `/* giscus-hue: ... */` and that the blog's
+   `src/components/Giscus.astro` contains exactly one `GISCUS_THEME_VERSION`.
 2. Stages, commits and pushes the theme repo (`main`).
 3. Reads the full 40-character commit hash.
-4. Rewrites the blog's `src/constants/giscus-theme.generated.ts`.
+4. Rewrites `GISCUS_THEME_VERSION` in the blog's `src/components/Giscus.astro`.
 5. Probes all eight jsDelivr URLs (with retries) and fails if any is not
    reachable.
 
