@@ -1,0 +1,16 @@
+/*!
+ * giscus theme for SilonGJ's blog (light, no rounded corners)
+ * Mirrors the blog's html.no-rounded behaviour.
+ */
+
+@import url("./light.css");
+
+*,
+*::before,
+*::after {
+	border-radius: 0 !important;
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 0 !important;
+}
