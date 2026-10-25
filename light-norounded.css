@@ -1,17 +1,3 @@
-/* Sharp corners. Base theme: light.css */
+/* Sharp corners. */
 @import url("./light.css");
-
-main {
-    --giscus-radius-card: 0;
-    --giscus-radius-control: 0;
-}
-
-*,
-*::before,
-*::after {
-    border-radius: 0 !important;
-}
-
-::-webkit-scrollbar-thumb {
-    border-radius: 0 !important;
-}
+@import url("./norounded.css");

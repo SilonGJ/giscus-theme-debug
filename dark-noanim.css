@@ -1,21 +1,3 @@
-/* Rounded corners, no motion. Base theme: dark.css */
+/* Rounded corners, no motion. */
 @import url("./dark.css");
-
-*,
-*::before,
-*::after {
-    transition: none !important;
-    animation: none !important;
-    scroll-behavior: auto !important;
-}
-
-/* The base theme marks the copy button transition as !important. */
-.gsc-main .ClipboardButton,
-.gsc-main .ClipboardButton svg {
-    transition: none !important;
-}
-
-/* The loader is an animated GIF; `animation: none` does not stop it. */
-.gsc-loading-image {
-    background-image: none !important;
-}
+@import url("./noanim.css");
