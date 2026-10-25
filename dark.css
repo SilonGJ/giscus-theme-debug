@@ -209,12 +209,18 @@ main {
             }
         }
 
+        /* Align body and actions with the author name column: 30px avatar + 0.5rem gap. */
         .gsc-comment-content {
-            padding: 0.5rem 0 0.25rem !important;
+            padding: 0.5rem 0 0.25rem calc(0.5rem + 30px) !important;
         }
 
         .gsc-comment-footer {
             margin-bottom: 0.25rem !important;
+            padding-left: calc(0.5rem + 30px) !important;
+        }
+
+        .gsc-comment-reactions {
+            margin-left: 0 !important;
         }
 
         .gsc-comment-author,
@@ -260,10 +266,9 @@ main {
     .gsc-comment-box {
         border: none !important;
         border-radius: var(--giscus-radius-card, 1rem) !important;
-        overflow: hidden;
 
         .gsc-comment-box-tabs {
-            padding: 0.5rem 0.5rem 0 !important;
+            padding: 0.5rem 0 !important;
             border: none !important;
             background-color: transparent !important;
 
@@ -273,29 +278,40 @@ main {
         }
 
         .gsc-comment-box-main {
-            margin: 0.5rem !important;
+            margin: 0 !important;
         }
 
         .gsc-comment-box-write {
+            position: relative;
             border-radius: var(--giscus-radius-control, 0.5rem);
-            box-shadow: 0 0 0 0 var(--color-accent-muted);
-            transition: box-shadow 0.25s ease !important;
         }
 
+        /* The base theme draws an outer focus ring; on a full-width input it
+           would be clipped by the iframe, so use an inner solid accent border. */
         .gsc-comment-box-write:focus-within {
-            box-shadow: 0 0 0 2px var(--color-accent-muted) !important;
+            box-shadow: none !important;
+        }
+
+        .gsc-comment-box-write::after {
+            position: absolute;
+            inset: 0;
+            z-index: 1;
+            border: 2px solid var(--color-accent-emphasis);
+            border-radius: inherit;
+            content: "";
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.25s ease;
+        }
+
+        .gsc-comment-box-write:focus-within::after {
+            opacity: 1;
         }
 
         .gsc-comment-box-textarea,
         .gsc-comment-box-textarea-extras {
             background-color: #0c1016 !important;
             border-color: var(--color-border-default) !important;
-            transition: border-color 0.25s ease !important;
-        }
-
-        .gsc-comment-box-write:focus-within .gsc-comment-box-textarea,
-        .gsc-comment-box-write:focus-within .gsc-comment-box-textarea-extras {
-            border-color: var(--color-accent-emphasis) !important;
         }
 
         .gsc-comment-box-textarea {
@@ -316,7 +332,7 @@ main {
 
         .gsc-comment-box-bottom {
             margin: 0 !important;
-            padding: 0 0.5rem 0.5rem !important;
+            padding: 0.5rem 0 !important;
         }
     }
 }
