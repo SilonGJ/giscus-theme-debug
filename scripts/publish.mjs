@@ -140,7 +140,7 @@ console.log(`\npinned ${sha} -> ${GISCUS_COMPONENT}`);
 
 // --- verify CDN ------------------------------------------------------------
 
-const base = `https://cdn.jsdelivr.net/gh/SilonGJ/giscus-theme-debug@${sha}`;
+const base = `https://fastly.jsdelivr.net/gh/SilonGJ/giscus-theme-debug@${sha}`;
 
 async function probe(url) {
 	for (let attempt = 1; attempt <= 15; attempt++) {

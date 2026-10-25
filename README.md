@@ -62,7 +62,7 @@ from upstream.
 Always reference an immutable commit hash, never `main`:
 
 ```text
-https://cdn.jsdelivr.net/gh/SilonGJ/giscus-theme-debug@<40-char-commit-sha>/<variant>.css
+https://fastly.jsdelivr.net/gh/SilonGJ/giscus-theme-debug@<40-char-commit-sha>/<variant>.css
 ```
 
 The blog builds all eight URLs from `GISCUS_THEME_VERSION` in
