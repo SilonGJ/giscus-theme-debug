@@ -1,0 +1,10 @@
+/* Sharp corners, no motion. Base theme: light-norounded.css */
+@import url("./light-norounded.css");
+
+*,
+*::before,
+*::after {
+	transition: none !important;
+	animation: none !important;
+	scroll-behavior: auto !important;
+}

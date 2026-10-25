@@ -1,0 +1,18 @@
+# NOTICE
+
+This project contains CSS derived from the following MIT-licensed sources:
+
+- giscus (https://github.com/giscus/giscus)
+  Copyright (c) giscus contributors
+  Built-in themes and the custom theme structure, in turn derived from GitHub
+  Primer primitives (https://github.com/primer/primitives), Copyright (c) GitHub Inc.
+
+- Fuwari PR #405 by hikaru-im (https://github.com/saicaca/fuwari/pull/405)
+  Fuwari-style giscus theme with light/dark and hue-reactive styling.
+
+- Yukari0201/Yukari0201.github.io (https://github.com/Yukari0201/Yukari0201.github.io)
+  Copyright (c) Yukari0201
+  Source of the palette and base selector layout used as the starting point.
+
+Modifications and additional variants in this repository are released under the
+MIT License; see LICENSE.

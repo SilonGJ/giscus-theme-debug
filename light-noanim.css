@@ -1,0 +1,10 @@
+/* Rounded corners, no motion. Base theme: light.css */
+@import url("./light.css");
+
+*,
+*::before,
+*::after {
+	transition: none !important;
+	animation: none !important;
+	scroll-behavior: auto !important;
+}

@@ -1,3 +1,6 @@
+/* giscus-hue: 260 */
+/* Keep in sync with siteConfig.themeColor.hue in the blog. */
+
 :root {
 	color-scheme: dark;
 
@@ -9,10 +12,10 @@
 	--giscus-radius-card: 0.75rem;
 	--giscus-radius-control: 0.5rem;
 	--giscus-input-bg: #0e0f16;
-	--giscus-codeblock-bg: oklch(0.17 0.015 280);
+	--giscus-codeblock-bg: oklch(0.17 0.015 260);
 	--giscus-codeblock-fg: rgb(255 255 255 / 90%);
-	--giscus-link-underline: oklch(0.40 0.08 280);
-	--giscus-selection: oklch(0.40 0.08 280);
+	--giscus-link-underline: oklch(0.40 0.08 260);
+	--giscus-selection: oklch(0.40 0.08 260);
 	--giscus-scrollbar: rgb(255 255 255 / 40%);
 	--giscus-scrollbar-hover: rgb(255 255 255 / 50%);
 	--giscus-shadow-popover: none;
@@ -48,48 +51,48 @@
 	--color-prettylights-syntax-sublimelinter-gutter-mark: #484f58;
 	--color-prettylights-syntax-constant-other-reference-link: #a5d6ff;
 
-	--color-btn-text: oklch(0.75 0.10 280);
-	--color-btn-bg: oklch(0.33 0.035 280);
+	--color-btn-text: oklch(0.75 0.10 260);
+	--color-btn-bg: oklch(0.33 0.035 260);
 	--color-btn-border: transparent;
 	--color-btn-shadow: 0 0 transparent;
 	--color-btn-inset-shadow: 0 0 transparent;
-	--color-btn-hover-bg: oklch(0.38 0.04 280);
+	--color-btn-hover-bg: oklch(0.38 0.04 260);
 	--color-btn-hover-border: transparent;
-	--color-btn-active-bg: oklch(0.43 0.045 280);
+	--color-btn-active-bg: oklch(0.43 0.045 260);
 	--color-btn-active-border: transparent;
-	--color-btn-selected-bg: oklch(0.43 0.045 280);
+	--color-btn-selected-bg: oklch(0.43 0.045 260);
 	--color-btn-primary-text: rgb(0 0 0 / 70%);
-	--color-btn-primary-bg: oklch(0.75 0.14 280);
+	--color-btn-primary-bg: oklch(0.75 0.14 260);
 	--color-btn-primary-border: transparent;
 	--color-btn-primary-shadow: 0 0 transparent;
 	--color-btn-primary-inset-shadow: 0 0 transparent;
-	--color-btn-primary-hover-bg: oklch(0.80 0.14 280);
+	--color-btn-primary-hover-bg: oklch(0.80 0.14 260);
 	--color-btn-primary-hover-border: transparent;
-	--color-btn-primary-selected-bg: oklch(0.70 0.14 280);
+	--color-btn-primary-selected-bg: oklch(0.70 0.14 260);
 	--color-btn-primary-selected-shadow: 0 0 transparent;
 	--color-btn-primary-disabled-text: rgb(0 0 0 / 40%);
-	--color-btn-primary-disabled-bg: oklch(0.55 0.06 280);
+	--color-btn-primary-disabled-bg: oklch(0.55 0.06 260);
 	--color-btn-primary-disabled-border: transparent;
-	--color-action-list-item-default-hover-bg: oklch(0.33 0.035 280);
-	--color-segmented-control-bg: oklch(0.33 0.035 280);
-	--color-segmented-control-button-bg: oklch(0.23 0.015 280);
-	--color-segmented-control-button-selected-border: oklch(0.75 0.14 280);
+	--color-action-list-item-default-hover-bg: oklch(0.33 0.035 260);
+	--color-segmented-control-bg: oklch(0.33 0.035 260);
+	--color-segmented-control-button-bg: oklch(0.23 0.015 260);
+	--color-segmented-control-button-selected-border: oklch(0.75 0.14 260);
 
 	--color-fg-default: rgb(255 255 255 / 90%);
 	--color-fg-muted: rgb(255 255 255 / 50%);
 	--color-fg-subtle: rgb(255 255 255 / 30%);
-	--color-canvas-default: oklch(0.23 0.015 280);
-	--color-canvas-overlay: oklch(0.19 0.015 280);
-	--color-canvas-inset: oklch(0.16 0.014 280);
-	--color-canvas-subtle: oklch(0.33 0.035 280);
+	--color-canvas-default: oklch(0.23 0.015 260);
+	--color-canvas-overlay: oklch(0.19 0.015 260);
+	--color-canvas-inset: oklch(0.16 0.014 260);
+	--color-canvas-subtle: oklch(0.33 0.035 260);
 	--color-border-default: rgb(255 255 255 / 10%);
 	--color-border-muted: rgb(255 255 255 / 8%);
-	--color-neutral-muted: oklch(0.33 0.035 280);
+	--color-neutral-muted: oklch(0.33 0.035 260);
 
-	--color-accent-fg: oklch(0.75 0.10 280);
-	--color-accent-emphasis: oklch(0.75 0.14 280);
-	--color-accent-muted: oklch(0.75 0.14 280 / 40%);
-	--color-accent-subtle: oklch(0.33 0.035 280);
+	--color-accent-fg: oklch(0.75 0.10 260);
+	--color-accent-emphasis: oklch(0.75 0.14 260);
+	--color-accent-muted: oklch(0.75 0.14 260 / 40%);
+	--color-accent-subtle: oklch(0.33 0.035 260);
 	--color-success-fg: oklch(0.75 0.14 150);
 	--color-attention-fg: oklch(0.75 0.14 70);
 	--color-attention-muted: oklch(0.75 0.14 70 / 40%);
@@ -99,8 +102,8 @@
 	--color-danger-subtle: oklch(0.30 0.06 25);
 	--color-primer-shadow-inset: 0 0 transparent;
 
-	--color-scale-gray-7: oklch(0.33 0.035 280);
-	--color-scale-blue-8: oklch(0.40 0.08 280);
+	--color-scale-gray-7: oklch(0.33 0.035 260);
+	--color-scale-blue-8: oklch(0.40 0.08 260);
 	--color-social-reaction-bg-hover: var(--color-scale-gray-7);
 	--color-social-reaction-bg-reacted-hover: var(--color-scale-blue-8);
 }
