@@ -196,6 +196,10 @@ a:hover,
 	display: none;
 }
 
+#__next .gsc-comments {
+	gap: 1rem;
+}
+
 #__next .gsc-comments-count a {
 	color: var(--color-fg-default);
 	text-decoration: none;
@@ -309,7 +313,7 @@ main #comments.giscus {
 	position: absolute;
 	inset: 0;
 	z-index: 1;
-	border: 3px solid transparent;
+	border: 2px solid transparent;
 	border-radius: inherit;
 	content: "";
 	pointer-events: none;
@@ -373,19 +377,47 @@ main #comments.giscus {
 }
 
 #__next .gsc-reply-box {
+	padding: 0.5rem 0.4375rem;
+	border: 0;
 	border-radius: 0 0 var(--giscus-radius-card) var(--giscus-radius-card);
-	border-color: var(--color-border-default);
+	background-color: transparent;
 }
 
 #__next .gsc-reply-box > button {
+	width: 100%;
+	padding: 0.25rem 0.5rem;
 	border: 0;
 	border-radius: var(--giscus-radius-control);
-	background-color: var(--giscus-input-bg);
+	background-color: transparent;
+	color: var(--color-fg-muted);
+	text-align: left;
+	cursor: pointer;
+}
+
+#__next .gsc-reply-box > button:hover,
+#__next .gsc-reply-box > button:focus-visible {
+	background-color: var(--color-btn-hover-bg);
+	color: var(--color-fg-muted);
+}
+
+#__next .gsc-reply-box > button:active {
+	background-color: var(--color-btn-active-bg);
 }
 
 #__next .gsc-reply-box > button:focus {
 	border: 0;
 	box-shadow: none;
+}
+
+#__next .gsc-comment-box-is-reply {
+	border: 0;
+	border-radius: 0 0 var(--giscus-radius-card) var(--giscus-radius-card);
+	background-color: transparent;
+}
+
+#__next .gsc-comment-box-is-reply .gsc-comment-box-main,
+#__next .gsc-comment-box-is-reply .gsc-comment-box-bottom {
+	margin-inline: 0.4375rem;
 }
 
 #__next .color-box-border-info {
