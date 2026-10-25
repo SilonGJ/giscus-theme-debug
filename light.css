@@ -1,12 +1,3 @@
-/*!
- * giscus theme for SilonGJ's blog (light)
- * Colors follow the blog's fuwari theme (hue 280).
- *
- * Based on GitHub Primer themes, licensed under the MIT License:
- * Copyright (c) 2018 GitHub Inc.
- * https://github.com/primer/primitives/blob/main/LICENSE
- */
-
 :root {
 	color-scheme: light;
 
@@ -17,6 +8,8 @@
 	--giscus-transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
 	--giscus-radius-card: 0.75rem;
 	--giscus-radius-control: 0.5rem;
+	--giscus-input-bg: #f7f7f7;
+	--giscus-tab-bg: #ebedff;
 	--giscus-codeblock-bg: oklch(0.17 0.015 280);
 	--giscus-codeblock-fg: rgb(255 255 255 / 90%);
 	--giscus-link-underline: oklch(0.93 0.04 280);
@@ -25,7 +18,6 @@
 	--giscus-scrollbar-hover: rgb(0 0 0 / 50%);
 	--giscus-shadow-popover: 0 8px 24px rgb(0 0 0 / 8%);
 
-	/* GitHub syntax palette, matching the blog's github-dark code blocks. */
 	--color-prettylights-syntax-comment: #8b949e;
 	--color-prettylights-syntax-constant: #79c0ff;
 	--color-prettylights-syntax-entity: #d2a8ff;
@@ -160,7 +152,7 @@ input,
 textarea,
 select,
 summary,
-.btn,
+#__next .btn,
 .form-control,
 .gsc-comment > div,
 .gsc-comment-box,
@@ -169,11 +161,9 @@ summary,
 .gsc-social-reaction-summary-item,
 .gsc-toolbar-item {
 	transition:
-		color var(--giscus-transition),
 		background-color var(--giscus-transition),
 		border-color var(--giscus-transition),
-		box-shadow var(--giscus-transition),
-		text-decoration-color var(--giscus-transition);
+		box-shadow var(--giscus-transition);
 }
 
 a:focus-visible,
@@ -234,19 +224,24 @@ main #comments.giscus {
 }
 
 #__next .gsc-comment-box:not(.gsc-comment-box-is-reply) {
+	border: 0;
 	border-radius: var(--giscus-radius-card);
-	border-color: var(--color-border-default);
 	background-color: var(--color-canvas-default);
 }
 
-#__next .gsc-comment-box:not(.gsc-comment-box-is-reply) .gsc-comment-box-tabs {
-	border-radius: var(--giscus-radius-card) var(--giscus-radius-card) 0 0;
-	border-color: var(--color-border-default);
-	background-color: var(--color-canvas-subtle);
+#__next .gsc-comment-box-tabs {
+	border: 0;
+	background-color: transparent;
+}
+
+#__next .gsc-comment-box-tabs > div {
+	margin-bottom: 0;
 }
 
 #__next .gsc-comment-box-tabs button {
-	border-radius: var(--giscus-radius-control) var(--giscus-radius-control) 0 0;
+	border: 1px solid transparent;
+	border-radius: var(--giscus-radius-control);
+	background-color: var(--giscus-tab-bg);
 }
 
 .gsc-comment-box-tabs button:hover {
@@ -254,19 +249,20 @@ main #comments.giscus {
 }
 
 #__next .gsc-comment-box-write {
+	border: 0;
 	border-radius: var(--giscus-radius-control);
+	box-shadow: none;
 }
 
-.gsc-comment-box-write:focus-within {
-	border-color: var(--color-accent-emphasis);
-	box-shadow: 0 0 0 2px var(--color-accent-muted);
+#__next .gsc-comment-box-write:focus-within {
+	border: 0;
+	box-shadow: none;
 }
 
 #__next .gsc-comment-box-textarea {
-	border-color: var(--color-border-default);
-	border-bottom-style: solid;
+	border: 0;
 	border-radius: var(--giscus-radius-control) var(--giscus-radius-control) 0 0;
-	background-color: var(--color-canvas-subtle);
+	background-color: var(--giscus-input-bg);
 	color: var(--color-fg-default);
 }
 
@@ -274,15 +270,15 @@ main #comments.giscus {
 	color: var(--color-fg-subtle);
 }
 
-.gsc-comment-box-textarea:focus {
-	border-color: var(--color-border-default);
+#__next .gsc-comment-box-textarea:focus {
+	border: 0;
 	box-shadow: none;
 }
 
 #__next .gsc-comment-box-textarea-extras {
-	border-color: var(--color-border-default);
+	border: 0;
 	border-radius: 0 0 var(--giscus-radius-control) var(--giscus-radius-control);
-	background-color: var(--color-canvas-subtle);
+	background-color: var(--giscus-input-bg);
 }
 
 #__next .gsc-comment-box-preview {
@@ -315,7 +311,14 @@ main #comments.giscus {
 }
 
 #__next .gsc-reply-box > button {
+	border: 0;
 	border-radius: var(--giscus-radius-control);
+	background-color: var(--giscus-input-bg);
+}
+
+#__next .gsc-reply-box > button:focus {
+	border: 0;
+	box-shadow: none;
 }
 
 #__next .color-box-border-info {
@@ -444,20 +447,11 @@ main #comments.giscus {
 }
 
 .gsc-loading-image {
-	background-image: none !important;
-	background-color: var(--color-accent-muted);
-	border-radius: 999px;
-	animation: giscus-pulse 1.2s ease-in-out infinite;
+	display: none;
 }
 
 main .pagination-loader-container {
 	background-image: none;
-}
-
-@keyframes giscus-pulse {
-	50% {
-		opacity: 0.35;
-	}
 }
 
 @media (prefers-reduced-motion: reduce) {
