@@ -509,29 +509,6 @@ main {
         }
     }
 
-    /* The top-level composer alone gets the larger input radius. */
-    .gsc-comment-box:not(.gsc-comment-box-is-reply) {
-        .gsc-comment-box-write {
-            border-radius: var(--giscus-radius-card, 1rem);
-        }
-
-        .gsc-comment-box-textarea {
-            border-radius:
-                var(--giscus-radius-card, 1rem)
-                var(--giscus-radius-card, 1rem)
-                0
-                0 !important;
-        }
-
-        .gsc-comment-box-textarea-extras {
-            border-radius:
-                0
-                0
-                var(--giscus-radius-card, 1rem)
-                var(--giscus-radius-card, 1rem) !important;
-        }
-    }
-
     /* The reply composer sits on a comment card, so blend into its background. */
     .gsc-comment-box-is-reply {
         background-color: transparent !important;
